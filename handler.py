@@ -1,4 +1,5 @@
 import json
+import datetime
 
 
 def hello(event, context):
@@ -9,6 +10,15 @@ def hello(event, context):
 
     response = {"statusCode": 200, "body": json.dumps(body)}
 
+    return response
+
+def hello_stiven(event, context):
+    current_date = datetime.date.today().strftime("%Y-%m-%d")
+    message = f"Hola Stiven {current_date}"
+    body = {
+        "message": message
+    }
+    response = {"statusCode": 200, "body": json.dumps(body)}
     return response
 
 def saludo(event, context):

@@ -22,3 +22,10 @@ functions:
       - http:
           path: /saludo
           method: get
+
+  hello_stiven:
+    handler: handler.hello_stiven
+    events:
+      - http:
+          path: /stiven
+          method: get
